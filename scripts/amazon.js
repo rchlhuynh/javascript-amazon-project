@@ -1,4 +1,6 @@
- let productsHTML = '';
+import {cart} from '../data/cart.js';
+
+let productsHTML = '';
 
 products.forEach((product) => {
     productsHTML += `
@@ -56,7 +58,7 @@ products.forEach((product) => {
 
 document.querySelector('.js-products-grid').innerHTML = productsHTML
 
-let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+let cartQuantity = 0;
 
 localStorage.getItem('cart') || [];
 
@@ -89,8 +91,6 @@ document.querySelectorAll('.js-add-to-cart-button')
             console.log(cartQuantity)
             console.log(cart);
             
-            localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
-            localStorage.setItem('cart', JSON.stringify(cart))
         });
         
     })
