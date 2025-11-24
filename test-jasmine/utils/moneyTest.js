@@ -1,4 +1,4 @@
-import {formatCurrency} from '../scripts/utils/money.js';
+import {formatCurrency} from '../../scripts/utils/money.js';
 //describe() creates a test suite in Jasmine
 //adding tests by giving it a second parameter as function
 
