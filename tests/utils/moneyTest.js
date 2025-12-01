@@ -1,4 +1,5 @@
 import {formatCurrency} from '../../scripts/utils/money.js';
+import {cart} from '../../data/cart.js';
 //describe() creates a test suite in Jasmine
 //adding tests by giving it a second parameter as function
 
@@ -19,5 +20,22 @@ describe('test suite: formatCurrency', () => {
     it('rounds up to the nearest cent', ()=> {
     expect(formatCurrency(2000.5)).toEqual('20.01');
     })
+
+    it('rounds down to the nearest cent', () => {
+        expect(formatCurrency(2000.4)).toEqual('20.00');
+    });
+
+    it('works with negative numbers', () => {
+        expect(formatCurrency(-200)).toEqual('-2.00')
+    })
 });
 
+describe('test suite: localStorage,setItem', () => {
+    it('check if code called cart', () => {
+        spyOn(localStorage, 'setItem');
+
+        localStorage.setItem('cart', '[]');
+        
+        expect(localStorage.setItem).toHaveBeenCalledWith('cart', '[]')
+    })
+})
