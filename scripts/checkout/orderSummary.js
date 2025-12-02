@@ -42,7 +42,7 @@ cart.forEach((cartItem) => {
                 src="${matchingProduct.image}">
 
               <div class="cart-item-details">
-                <div class="product-name">
+                <div class="product-name js-product-name-${matchingProduct.id}">
                   ${matchingProduct.name}
                 </div>
                 <div class="product-price">
@@ -96,11 +96,11 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
     cartItem.deliveryOptionId;
     html +=
     `
-      <div class="delivery-option js-delivery-option"
+      <div class="delivery-option js-delivery-option js-delivery-option-${deliveryOption.id}-${matchingProduct.id}"
       data-product-id="${matchingProduct.id}"
       data-delivery-option-id="${deliveryOption.id}">
         <input type="radio" ${isChecked ? 'checked' : ''}
-          class="delivery-option-input"
+          class="delivery-option-input js-delivery-option-${deliveryOption.id}-${matchingProduct.id}"
           name="delivery-option-${matchingProduct.id}">
         <div>
           <div class="delivery-option-date">
