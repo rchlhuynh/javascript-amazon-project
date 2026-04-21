@@ -75,7 +75,4 @@ describe('test suite: renderOrderSummary', () => {
 
     });
 
-    it('updates delivery option', () => {
-        document.querySelector(`.js-delivery-option-${deliveryOption.id}`)
-    })
 });

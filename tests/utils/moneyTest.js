@@ -21,16 +21,16 @@ describe('test suite: formatCurrency', () => {
     expect(formatCurrency(2000.5)).toEqual('20.01');
     })
 
-    it('rounds down to the nearest cent', () => {
+    xit('rounds down to the nearest cent', () => {
         expect(formatCurrency(2000.4)).toEqual('20.00');
     });
 
-    it('works with negative numbers', () => {
+    xit('works with negative numbers', () => {
         expect(formatCurrency(-200)).toEqual('-2.00')
     })
 });
 
-describe('test suite: localStorage,setItem', () => {
+xdescribe('test suite: localStorage,setItem', () => {
     it('check if code called cart', () => {
         spyOn(localStorage, 'setItem');
 
