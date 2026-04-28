@@ -76,6 +76,7 @@ console.log(raceCar);
 
 car1.go();
 car2.brake();
+raceCar.go();
 car2.openTrunk();
 car1.displayInfo();
 car2.displayInfo();
