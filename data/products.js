@@ -12,19 +12,21 @@ export function getProduct(productId) {
     return matchingProduct
 }
 
-class Product {
+export class Product {
   id;
   image;
   name;
   rating;
   priceCents;
+  type
 
   constructor(productDetails) {
     this.id = productDetails.id;
     this.image = productDetails.image;
     this.name = productDetails.name;
     this.rating = productDetails.rating;
-    this.priceCents = productDetails.priceCents
+    this.priceCents = productDetails.priceCents;
+    this.type = productDetails.type;
   }
 
   getStarsUrl() {
@@ -43,7 +45,7 @@ class Product {
 }
 
 //it means clothing will take all the properties and methods of product class
-class Clothing extends Product {
+export class Clothing extends Product {
   sizeChartLink;
 
   constructor(productDetails) {
@@ -62,7 +64,7 @@ class Clothing extends Product {
   }
 }
 
-class Appliance extends Product {
+export class Appliance extends Product {
   instructionsLink;
   warrantyLink;
 
@@ -788,4 +790,3 @@ export const products = [
   }
   return new Product(productDetails);
 });
-
