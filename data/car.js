@@ -1,3 +1,4 @@
+/*
 export class Car {
     #brand;
     #model;
@@ -81,4 +82,4 @@ car2.openTrunk();
 car1.displayInfo();
 car2.displayInfo();
 raceCar.displayInfo();
-
+*/
